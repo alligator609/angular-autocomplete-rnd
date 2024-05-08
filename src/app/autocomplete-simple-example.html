@@ -11,7 +11,7 @@
       #auto="matAutocomplete"
       [displayWith]="getTitle.bind(this)">
       <mat-option 
-        *ngFor="let book of books" 
+        *ngFor="let book of books$ |async" 
         [value]="book.id">
         {{book.title}}
       </mat-option>
